@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gitarrfix – Om mig</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Felipa&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(10, 10, 10, 0.9);
+      backdrop-filter: blur(8px);
+      padding: 1rem 8%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header img {
+      height: 45px;
+    }
+
+    /* NAVIGATION */
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+/* Hover färg */
+nav a:hover {
+  color: #c6a85b;
+}
+
+/* Elegant underline animation */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 1px;
+  background: #c6a85b;
+  transition: 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                  url('guitar-hero.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 0 2rem;
+      
+    }
+
+    .hero h2 {
+      font-size: 5rem;
+      letter-spacing: 3px;
+      margin-bottom: 0.2rem;
+      font-family: Playfair Display
+      
+    }
+
+    .hero p {
+      font-weight: 300;
+      opacity: 0.95;
+      color: rgb(220, 220, 220);
+    }
+
+    section {
+      padding: 7rem 8%;
+    }
+
+    /* ABOUT SECTION */
+    .about {
+      background: #131313;
+    }
+
+    .about-container {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .about-img img {
+  width: 100%;
+  border-radius: 10px;
+    
+    filter: 
+    brightness(95%)
+    saturate(100%)
+    sepia(10%);
+
+  
+    
+    
+    
+    
+    
+
+    
+    
+
+  
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  transition: 0.5s ease;
+}
+
+
+
+
+
+    .about-text h3 {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      color: white;
+      font-family: playfair Display;
+    }
+
+    .about-text p {
+      margin-bottom: 1.3rem;
+      font-weight: 300;
+      color: #ffffff;
+      font-family: sans-serif
+    }
+    /* PRICE SECTION */
+.price {
+  background: #0f0f0f;
+  color: white;
+  font-family: sans-serif
+}
+
+.price-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.price h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-family: playfair Display;
+}
+
+.price-info {
+  color: #bdbdbd;
+  font-size: 0.9rem;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  font-family: sans-serif;
+}
+
+.price-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #2a2a2a;
+  padding-bottom: 0.8rem;
+}
+
+.price-item span:last-child {
+  font-weight: 600;
+}
+
+.price-note {
+  font-size: 0.85rem;
+  color: #9e9e9e;
+  margin-top: 0.3rem;
+  font-family: sans-serif;
+}
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+        font-family: playfair Display;
+      }
+    }
+
+    /* GALLERI */
+.gallery {
+  background: #131313;
+  color: white;
+  font-family: playfair Display;
+}
+
+.gallery h3 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  font-family: Playfair Display;
+}
+
+.gallery-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: 0.4s ease;
+  filter: grayscale(20%) contrast(95%);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  filter: grayscale(0%);
+}
+
+/* Mobil */
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+   .ommiglinje {
+  border: none;
+  height: 1px;
+  background-color: #616161;
+  width: 75%;
+  margin: 0 auto 4rem auto;
+}
+
+.bommiglinje {
+  border: none;
+  height: 1px;
+  background-color: #616161;
+  width: 75%;
+  margin: 4rem auto 4rem auto; /* top margin added */
+}
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 2rem;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 10px;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+/* Stäng-knapp */
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #c6a85b;
+}
+
+/* Bild med text overlay */
+.gallery-grid a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 18px;
+  
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.gallery-grid a span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: white;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  opacity: 0;
+  transition: 0.4s ease;
+  font-family: sans-serif;
+}
+
+.gallery-grid a:hover span {
+  opacity: 1;
+}
+
+.gallery-grid a:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-more-text {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  color: #bdbdbd;
+  font-family: sans-serif;
+  
+}
+
+.gallery-more-text a {
+  color: #c6a85b;
+  text-decoration: none;
+  font-weight: 500;
+  
+}
+
+.gallery-more-text a:hover {
+  text-decoration: underline;
+}
+
+/* KONTAKT */
+.contact {
+  background: #0f0f0f;
+  color: white;
+  padding: 7rem 8%;
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.contact-container {
+  max-width: 700px;
+  text-align: center;
+}
+
+.contact h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  font-family: playfair Display;
+}
+
+.contact-intro {
+  color: #bdbdbd;
+  margin-bottom: 3rem;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+.contact-info p {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.contact-info a {
+  color: #c6a85b;
+  text-decoration: none;
+  position: relative;
+}
+
+.contact-info a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0%;
+  height: 1px;
+  background: #c6a85b;
+  transform: translateX(-50%);
+  transition: 0.3s ease;
+}
+
+.contact-info a:hover::after {
+  width: 100%;
+}
+
+/* Göm checkboxen helt */
+.menu-toggle {
+  display: none;
+}
+
+/* Hamburgarikonens utseende */
+.hamburger {
+  display: none; /* Dold på desktop */
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  transition: 0.3s ease;
+}
+
+/* MOBILANPASSNING (max 900px) */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex; /* Visa hamburgaren på mobil */
+  }
+
+  nav {
+    display: none; /* Dölj menyn som standard */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    padding: 2rem;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  /* DETTA ÄR MAGIN: Om checkboxen är ikryssad, visa nav */
+  .menu-toggle:checked ~ nav {
+    display: flex;
+  }
+
+  /* Valfritt: Gör om de tre strecken till ett X när menyn är öppen */
+  .menu-toggle:checked ~ .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-toggle:checked ~ .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle:checked ~ .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* FOOTER / RÄTTIGHETER-BAR */
+.site-footer {
+  background: #050505; 
+  color: #888;
+  padding: 2.5rem 8%; /* Lite mer luft uppe och nere */
+  border-top: 1px solid #1a1a1a;
+  font-size: 0.85rem;
+  text-align: center; /* Centrerar all text som standard */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Lägger elementen på höjden */
+  align-items: center;    /* Centrerar dem horisontellt */
+  gap: 1rem;              /* Mellanrum mellan copyright och länkar */
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center; /* Centrerar länkarna i sin egen rad */
+}
+
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #c6a85b;
+}
+
+/* Detta ser till att bilden faktiskt försvinner när vi klickar på krysset */
+.lightbox:target {
+  display: flex !important;
+
+}
+
+/* Gör så att man stänger genom att klicka var som helst utom på bilden */
+.lightbox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  cursor: default;
+}
+
+/* Fixar krysset så det stänger utan att hoppa */
+.close-fix {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+  z-index: 2001;
+}
+
+
+  </style>
+
+
+</head>
+
+<body>
+
+<header>
+  <img src="https://291070f720.cbaul-cdnwnd.com/27d46b93f882c02a9331a44e49ea3057/200000011-3ca3f3ca40/logo_gitarrfix_vit.png?ph=291070f720" alt="Gitarrfix logotyp">
+  
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  
+  <label for="menu-toggle" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav>
+    <a href="#">Hem</a>
+    <a href="#om">Om mig</a>
+    <a href="#pris">Priser</a>
+    <a href="#galleri">Galleri</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>GitarrFix</h2>
+    <p>Service och reparation av gitarr och bas</p>
+  </div>
+</section>
+
+
+
+<!-- OM MIG -->
+<section id="om" class="about">
+    <hr class ="ommiglinje">
+  <div class="about-container">
+
+    <div class="about-img">
+      <img src="IMG_1882.png" alt="Gitarrtekniker">
+    </div>
+   
+    
+
+    <div class="about-text">
+      <h3>Om mig</h3>
+      <p>
+       Jag gör underhåll och reparationer på din akustiska gitarr, elgitarr eller elbas. Jag hjälper till med både enklare service och mer omfattande arbeten när det behövs.
+<p>
+Oavsett om det handlar om att få spelkänslan rätt, åtgärda slitage eller ge instrumentet en ordentlig genomgång ser jag till att det fungerar som det ska. Hör av dig om du vill boka tid eller få ditt instrument servat.
+</p>
+      </p>
+    </div>
+
+  </div>
+   <hr class ="bommiglinje">
+</section>
+
+<!-- PRISEXEMPEL -->
+<section class="price" id="pris">
+  <div class="price-container">
+    
+    <h3>Prisexempel</h3>
+
+    <div class="price-info">
+      Inklusive moms och exklusive material.<br>
+      OBS! Priserna är ca-priser och kan variera beroende på hur omfattande arbetet är.
+    </div>
+
+    <div class="price-list">
+
+      <div class="price-item">
+        <span>Strängbyte</span>
+        <span>300 kr</span>
+      </div>
+
+      <div class="price-item">
+        <span>Rengöring av greppbräda</span>
+        <span>500 kr</span>
+      </div>
+
+      <div class="price-item">
+        <span>Intonering</span>
+        <span>500 kr</span>
+      </div>
+
+      <div class="price-item">
+        <span>Byte av sadel</span>
+        <span>700 kr</span>
+      </div>
+
+      <div class="price-item">
+        <span>Byte av mikrofon Strata/Tele</span>
+        <span>500 kr</span>
+      </div>
+
+      <div class="price-item">
+        <span>Byte mikrofon 335 eller liknande</span>
+        <span>800 kr</span>
+      </div>
+
+      <div class="price-item">
+        <div>
+          <div>Bandslip</div>
+          <div class="price-note">
+            Rengöring av greppbräda, bandslip, strängbyte och intonering.
+            (+300 kr för gitarr med Floyd Rose)
+          </div>
+        </div>
+        <span>1400 kr</span>
+      </div>
+
+      <div class="price-item">
+        <div>
+          <div>Ombandning</div>
+          <div class="price-note">Rostfritt +1000 kr</div>
+        </div>
+        <span>2700 kr</span>
+      </div>
+
+      <div class="price-item">
+        <div>
+          <div>Ombandning av gitarr med binding</div>
+          <div class="price-note">Rostfritt +1000 kr</div>
+        </div>
+        <span>3700 kr</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERI -->
+<section id="galleri" class="gallery">
+  <h3>Galleri</h3>
+
+  <div class="gallery-grid">
+
+    <a href="#img1">
+      <img src="FOTOGALLERI/LEVIN GUITAR.webp" alt="">
+      <span>Gammal Levin lagas. Före och efter</span>
+    </a>
+
+    <a href="#img2">
+      <img src="FOTOGALLERI/Mandolin.webp" alt="">
+      <span>Lagad spricka på Levin-mandolin</span>
+    </a>
+
+    <a href="#img3">
+      <img src="FOTOGALLERI/STRATOCASTER-77.webp" alt="">
+      <span>Ombandning av Fender Stratocaster-77</span>
+    </a>
+
+    <a href="#img4">
+      <img src="FOTOGALLERI/Gibson les Paul.webp" alt="">
+      <span>Gibson Les Paul får "50's" wiring</span>
+    </a>
+
+    <a href="#img5">
+      <img src="FOTOGALLERI/Ebenholtzbrädan.webp" alt="">
+      <span>Lagning av spricka i ebenholtzbrädan</span>
+    </a>
+
+    <a href="#img6">
+      <img src="FOTOGALLERI/Strata.webp" alt="">
+      <span>Bandslip av strata</span>
+    </a>
+
+  </div>
+
+  <!-- TEXT UNDER ALLA BILDER -->
+  <p class="gallery-more-text">
+    Se fler projekt och resultat på
+    <a href="https://www.facebook.com/p/Gitarrfix-100063680943373/" target="_blank">Facebook</a>
+  </p>
+
+</section>
+
+
+<!-- LIGHTBOX BILDER -->
+
+<div id="img1" class="lightbox">
+  <a href="#_" class="close-fix">&times;</a>
+  <img src="FOTOGALLERI/LEVIN GUITAR FÖRE.webp">
+</div>
+
+<div id="img2" class="lightbox">
+  <a href="#_" class="close-fix">&times;</a>
+  <img src="FOTOGALLERI/Mandolin.jpg">
+</div>
+
+<div id="img3" class="lightbox">
+  <a href="#_" class="close-fix">&times;</a>
+  <img src="FOTOGALLERI/STRATOCASTER-77.webp">
+</div>
+
+<div id="img4" class="lightbox">
+  <a href="#_" class="close-fix">&times;</a>
+  <img src="FOTOGALLERI/Gibson les Paul.webp">
+</div>
+
+<div id="img5" class="lightbox">
+  <a href="#_" class="close-fix">&times;</a>
+  <img src="FOTOGALLERI/Ebenholtzbrädan.webp">
+</div>
+
+<div id="img6" class="lightbox">
+  <a href="#_" class="close-fix">&times;</a>
+  <img src="FOTOGALLERI/Strata.webp">
+</div>
+<!-- KONTAKT -->
+
+<section id="kontakt" class="contact">
+
+  <div class="contact-container">
+
+    <h3>Kontakt</h3>
+
+    <p class="contact-intro">
+      Har du frågor eller vill boka service? Hör av dig.
+    </p>
+
+    <div class="contact-info">
+
+      <p>
+        <strong>Email:</strong><br>
+       <a href="mailto:dinmail@gmail.com">rickardmorlin@gmail,com</a>
+      </p>
+
+      <p>
+        <strong>Telefon:</strong><br>
+        <a href="tel:0700000000">070-749 50 37</a>
+      </p>
+
+      <p>
+        <strong>Plats:</strong><br>
+        Sira olafs gata 12
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2026 Gitarrfix. Alla rättigheter förbehållna.</p>
+    <div class="footer-links">
+      <a href="#">Integritetspolicy</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+</body>
